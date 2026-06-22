@@ -1,6 +1,10 @@
 import pandas as pd
 import streamlit as st
 
+df = pd.read_csv("recipes_data.csv", nrows=5, encoding="latin1")
+print(df["ingredients"].iloc[0])
+print(type(df["ingredients"].iloc[0]))
+
 st.title("Recipe Recommender")
 
 recipes = pd.read_csv("recipes.csv", encoding="latin1")
